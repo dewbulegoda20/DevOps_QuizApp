@@ -1,0 +1,154 @@
+/* General container styling */
+.contactSection {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  
+}
+
+.contactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Left side (Image) */
+.contactLeft {
+  flex: 1;
+  max-width: 50%;
+}
+
+.contactLeft img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Right side (Contact Form and Details) */
+.contactRight {
+  flex: 1;
+  max-width: 45%;
+  margin-left: auto;
+}
+
+.contactRight h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contactRight p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Contact details */
+.contactInfoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.contactInfoBox h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contactInfoBox p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Form styling */
+form {
+  margin-bottom: 30px;
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 48%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  width: 48%;
+}
+
+form textarea {
+  width: 100%;
+  resize: none;
+}
+
+.contactBtn {
+  padding: 12px 30px;
+  background-color: #1eb2a6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contactBtn:hover {
+  background-color: #15776f;
+}
+
+/* Social media links */
+.contactRight h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contactRight span {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 16px;
+  color: #1eb2a6;
+  cursor: pointer;
+}
+
+.contactRight span:hover {
+  color: #15776f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .contactLeft,
+  .contactRight {
+    max-width: 100%;
+  }
+
+  .formRow {
+    flex-direction: column;
+  }
+
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+  }
+}

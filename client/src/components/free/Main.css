@@ -1,0 +1,176 @@
+.container ol li{
+    font-size: 2.5em;
+    color: #cecece;
+    list-style-type: disc;
+    padding-left: 0; 
+    
+}
+
+
+.bg {
+    font-family: "Roboto", sans-serif;
+    
+}
+.container1 .titles{
+  font-size: 45px;
+  color: #fff;
+
+}
+
+
+.start{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.start .btn{
+    padding: 1.2em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: #202020;
+    text-decoration: none;
+    background-color: #f9f9f9;
+}
+
+
+
+.container1 .userid{
+    
+    padding: 0.4em 0.2em;
+    width: 30%;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+#heading {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  #heading h1 {
+    font-size: 45px;
+    margin: 20px 0;
+    text-transform: capitalize;
+  }
+  p {
+    line-height: 30px;
+    font-size: 18px;
+  }
+  
+  .back {
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    padding-top: 30%;
+    padding-right: 50px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .back h1 {
+    font-size: 100px;
+    font-weight: 400;
+  }
+  .back h2 {
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+  .margin {
+    margin-top: 40.3%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+  .flex {
+    display: flex;
+  }
+  .padding {
+    padding: 80px 0;
+  }
+  .shadow {
+    box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+    background-color: #fff;
+  }
+  
+
+  @import url('http://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --primary-color: #1eb2a6;
+  --dark-color: #222222;
+  --light-color: #f0f0f0;
+}
+
+/* Table Container */
+.table-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Table Header */
+.table-header {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.table-header .table-row td {
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Table Body */
+.table-body {
+  background-color: var(--light-color);
+  border-bottom: 1px solid #ddd;
+}
+
+.table-body td {
+  padding: 15px;
+  text-align: left;
+  color: var(--dark-color);
+}
+
+/* Hover Effect for Rows */
+.table-body:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .table-header, .table-body {
+    display: block;
+  }
+
+  .table-header .table-row, .table-body .table-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table-header .table-row td, .table-body .table-row td {
+    width: 100%;
+    display: block;
+  }
+}

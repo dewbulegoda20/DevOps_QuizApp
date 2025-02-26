@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: "mongo"
+    container_name: mongodb
+    restart: always
+    volumes:
+      - data:/data/db
+    ports:
+      - "27017:27017"
+
+  server:
+    build: ./server
+    container_name: server
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - logs:/app/logs
+      - ./server:/app
+      - /app/node_modules
+    depends_on:
+      - mongodb
+    command: >
+      sh -c "npm install && npm start"
+
+  client:
+    build: ./client
+    container_name: client
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client/src:/app/src
+      - ./client/public:/app/public
+      - /app/node_modules
+    stdin_open: true
+    tty: true
+    depends_on:
+      - server
+    command: >
+      sh -c "npm install && npm start"
+
+volumes:
+  data:
+  logs:

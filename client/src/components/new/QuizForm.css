@@ -1,0 +1,122 @@
+
+/* Styles for the QuizForm container */
+form  {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Title and heading styles */
+h1 .head {
+    text-align: center;
+    color: #fff;
+    font-size: 5em;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Quiz Title Input */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  input[type="text"]:focus {
+    background-color: #fff;
+    border-color: #1eb2a6;
+    outline: none;
+  }
+  
+  /* Question Section */
+  .question-block {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #1eb2a6;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+  }
+  
+  /* Options Styling */
+  input[type="text"].option {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"].option:last-child {
+    margin-right: 0;
+  }
+  
+  /* Buttons */
+  
+  button[type="add-question-btn"] {
+    background-color: #28a745;
+    color : #fff;
+    font-size: 1em;
+  }
+  
+  button[type="add-question-btn" ]:hover {
+    background-color: #218838;
+    color : #fff;
+  }
+
+  button[type="delete-question-btn"] {
+    background-color: #fc5353;
+    color : #fff;
+    font-size: 0.8em;
+  }
+  
+  button[type="delete-question-btn" ]:hover {
+    background-color: #bf4e4e;
+    color : #fff;
+  }
+  
+  /* Add Question Button */
+  .add-question-btn {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+  }
+  .delete-question-btn {
+    padding: 10px 15px;
+  }
+  
+
+  /* Submit Button */
+  button[type="submit"] {
+    width: 100%;
+    background-color: #1eb2a6;
+    font-weight: bold;
+    color : #fff;
+    font-size: 1em;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #178d81;
+    color : #fff;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 600px) {
+    input[type="text"].option {
+      width: 100%;
+    }
+  }
