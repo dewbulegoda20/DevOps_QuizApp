@@ -1,0 +1,42 @@
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: server
+    ports:
+      - "5000:5000"
+    networks:
+      - mern
+    environment:
+      - MONGO_URL=mongodb+srv://umeshatharindi2020:devops@quizapp.5uuutgs.mongodb.net/?retryWrites=true&w=majority&appName=QuizApp
+      - JWT_SECRET=sheyquiz
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    restart: always
+  
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: client
+    environment:
+      - WDS_SOCKET_PORT=0  # Fix for webpack HMR in Docker
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    networks:
+      - mern
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    restart: always
+    
+networks:
+  mern:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local
